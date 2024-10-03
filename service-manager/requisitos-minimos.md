@@ -16,7 +16,7 @@ layout:
 # Requisitos Mínimos
 
 {% hint style="info" %}
-As informações desse artigo tiveram como fonte a páginal da Wiki oficial da VR([Requisitos Mínimos](https://wiki.vrsoft.com.br/wiki/index.php/Requisitos\_M%C3%ADnimos) e [VRUbuntu](https://wiki.vrsoft.com.br/wiki/index.php/VRUbuntu\_Instalacao)). Em caso de informações desatualizadas ou link indisponíveis neste documento, abra uma _issue_.
+As informações desse artigo tiveram como fonte a páginal da Wiki oficial da VR ([Requisitos Mínimos](https://wiki.vrsoft.com.br/wiki/index.php/Requisitos\_M%C3%ADnimos) e [VRUbuntu](https://wiki.vrsoft.com.br/wiki/index.php/VRUbuntu\_Instalacao)) e orientações internas. Em caso de informações desatualizadas ou links indisponíveis neste documento, abra uma _issue_.
 {% endhint %}
 
 ## Sistema Operacional
@@ -31,5 +31,7 @@ Todas as aplicações do ecossistema VR que rodam em Docker precisam ser instala
 | HD padrão SATA (6Gb/s)       | 200 GB (mínimo)                                                                                                                                    |
 
 {% hint style="warning" %}
-O servidor do Service Manager precisa estar se comunicando com o servidor de banco de dados para funcionar.  No cenário de máquinas físicas, é recomendado que ambos os servidores permaneçam na mesma loja sob a mesma rede interna.
+O servidor do Service Manager precisa estar se comunicando com o servidor de banco de dados para funcionar.  No cenário de máquinas físicas, é recomendado que ambos os servidores permaneçam na mesma loja sob a mesma rede interna. \
+&#x20;\
+A formatação da máquina e sua configuração de rede é de responsabilidade do TI da loja.
 {% endhint %}
