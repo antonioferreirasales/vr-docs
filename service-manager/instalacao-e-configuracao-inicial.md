@@ -98,15 +98,19 @@ chmod +x atalhos.sh
 
 <figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption><p>É necessário digitar o número da opção desejada e apertar Enter. Caso encerre por acidente o script, rode apenas ./atalhos.sh para executar novamente.</p></figcaption></figure>
 
-3.  Ao iniciar o script, digite **2** que corresponde a opção “Service Manager”. E então insira o número da opção corresponde a versão do VRMaster do cliente.\
+3.  Ao iniciar o script, digite **2** que corresponde a opção “Service Manager” e aperte a tecla _Enter_ para seguir.&#x20;
 
+    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Escolha a opção Service Manager no menu de funções.</p></figcaption></figure>
+
+
+4.  Digite o número da lista que corresponde a versão do VRMaster do cliente.
 
     <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption><p>Geralmente 4.2. Em caso de dúvidas confirmar no servidor de aplicativos.</p></figcaption></figure>
-4.  Na pergunta seguinte, escolha a opção 1, pois estamos instalando pela primeira vez e não apenas atualizando.\
+5.  Na pergunta seguinte, escolha a opção 1, pois estamos instalando pela primeira vez e não apenas atualizando.\
 
 
     <figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption><p>Uma vez instalado, a opção 2 pode ser utilizada para atualizar as aplicações.</p></figcaption></figure>
-5. Insira cada informação solicitada pelo script para gerar os arquivos de configuração corretos (_vr.properties_ e _docker-compose-sm-sc.yml_).
+6. Insira cada informação solicitada pelo script para gerar os arquivos de configuração corretos (_vr.properties_ e _docker-compose-sm-sc.yml_).
 
 {% tabs %}
 {% tab title="IP do Ubuntu" %}
