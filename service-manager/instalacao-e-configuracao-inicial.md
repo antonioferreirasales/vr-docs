@@ -89,16 +89,15 @@ echo $USER #para retornar o nome do usuário atual
 pwd #para retornar o diretório atual do terminal
 ```
 
-2.  Confirmando seu diretório atual, você pode seguir com o próximo 3 comandos para, respectivamente, baixar, permitir e executar o script. Para executar o script, último comando, é necessário inserir a senha do usuário logado.\
-
-
-    <figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption><p>É necessário digitar o número da opção desejada e apertar Enter.</p></figcaption></figure>
+2. Confirmando seu diretório atual, você pode seguir com os próximos 3 comandos para, respectivamente, baixar, dar permissões e executar o script. Para executar o script é necessário inserir a senha do usuário logado.
 
 ```bash
 curl https://storage.googleapis.com/linux-pdv/gbardini/util/sm/atalhos.sh -o atalhos.sh
 chmod +x atalhos.sh
 ./atalhos.sh
 ```
+
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption><p>É necessário digitar o número da opção desejada e apertar Enter.</p></figcaption></figure>
 
 3.  Ao iniciar o script, digite **2** que corresponde a opção “Service Manager”. E então insira o número da opção corresponde a versão do VRMaster do cliente.\
 
