@@ -41,12 +41,12 @@ Um container Docker consiste em:
 O conceito é emprestado dos contêineres de transporte marítimo, que definem um padrão para enviar mercadorias globalmente. O Docker define um padrão para enviar software.
 
 {% hint style="info" %}
-**Se você está familiarizado com o conceito de Máquina Virtual, o **_**container**_** tem suas similaridades, pois também conseguem isolar seu ambiente de execução do restante do sistema operacional.**
+**Se você está familiarizado com o conceito de Máquina Virtual, o **_**container**_** tem suas similaridades, pois também consegue isolar seu ambiente de execução do restante do sistema operacional.**
 {% endhint %}
 {% endtab %}
 
 {% tab title="Images" %}
-_Images_, ou imagens, são a base dos containers. Uma imagem é uma coleção ordenada de alterações no sistema de arquivos raiz e os parâmetros de execução correspondentes para uso dentro de um ambiente de execução de _containers_. Uma imagem geralmente contém uma união de sistemas de arquivos em **camadas** empilhados uns sobre os outros.
+_Images_, ou imagens, são a base dos containers. Uma imagem é uma coleção ordenada de alterações no sistema de arquivos raiz e os correspondentes parâmetros de execução para uso dentro de um ambiente de execução de _containers_. Uma imagem geralmente contém uma união de sistemas de arquivos em **camadas** empilhadas umas sobre as outras.
 {% endtab %}
 
 {% tab title="Layer" %}
