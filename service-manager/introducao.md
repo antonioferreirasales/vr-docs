@@ -1,6 +1,6 @@
 ---
-description: Uma introdução da ferramenta.
 icon: info
+description: Uma introdução da ferramenta.
 layout:
   title:
     visible: true
@@ -22,10 +22,10 @@ layout:
 
 É uma plataforma aberta criada para facilitar o desenvolvimento, a implantação e a execução de aplicações em ambientes isolados. Foi desenhada especialmente para disponibilizar uma aplicação da forma mais rápida possível.
 
-Utilizando o Docker como ferramente é possível desenvolver aplicações em um _ambiente_ controlado e totalmente configurável e criar imagens idênticas deste ambiente para serem distribuídas e replicadas em diferentes máquinas para fins de produção do cliente final.
+Utilizando o Docker como ferramente é possível desenvolver aplicações em um _ambiente_ controlado e altamente configurável e criar imagens idênticas deste ambiente para serem distribuídas e replicadas em diferentes máquinas para fins de produção do cliente final.
 
 {% hint style="info" %}
-Para compreender melhor como o Docker funciona é importante conhecer sua terminologia. Ao decorrer do documento você se deparará diversas vezes com estes termos então é importante ter uma ideia teórica para aprender a identificá-los e entendê-los no final.
+Para compreender melhor como o Docker funciona é importante conhecer sua terminologia. Ao decorrer do documento você se deparará diversas vezes com estes termos, então é importante ter uma ideia teórica para aprender a identificá-los e entendê-los no final.
 {% endhint %}
 
 {% tabs %}
@@ -41,7 +41,7 @@ Um container Docker consiste em:
 O conceito é emprestado dos contêineres de transporte marítimo, que definem um padrão para enviar mercadorias globalmente. O Docker define um padrão para enviar software.
 
 {% hint style="info" %}
-**Se você está familiarizado com o conceito de Máquina Virtual o **_**container**_** tem suas semelhanças, pois também conseguem isolar seu ambiente de execução do restante do sistema operacional.**
+**Se você está familiarizado com o conceito de Máquina Virtual, o **_**container**_** tem suas similaridades, pois também conseguem isolar seu ambiente de execução do restante do sistema operacional.**
 {% endhint %}
 {% endtab %}
 
