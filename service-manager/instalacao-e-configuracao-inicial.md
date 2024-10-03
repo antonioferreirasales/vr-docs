@@ -79,15 +79,14 @@ Antes de seguir com a instalação, confirme com o cliente a senha do usuário l
 Padrões de senha da VR: vrserver, vr123456, vrsoftw@re.
 {% endhint %}
 
-1.  O primeiro passo é abrir o terminal na pasta home do usuário. Por padrão, o terminal já abrirá neste exato diretório, mas você pode confirmar com os comandos:\
-
-
-    <figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption><p>A esquerda, em verde, você pode identificar usuário@nomeDaMáquina.</p></figcaption></figure>
+1. O primeiro passo é abrir o terminal na pasta home do usuário. Por padrão, o terminal já abrirá neste exato diretório, mas você pode confirmar com os comandos:
 
 ```bash
 echo $USER #para retornar o nome do usuário atual
 pwd #para retornar o diretório atual do terminal
 ```
+
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption><p>A esquerda, em verde, você pode identificar usuário@nomeDaMáquina.</p></figcaption></figure>
 
 2. Confirmando seu diretório atual, você pode seguir com os próximos 3 comandos para, respectivamente, baixar, dar permissões e executar o script. Para executar o script é necessário inserir a senha do usuário logado.
 
@@ -97,7 +96,7 @@ chmod +x atalhos.sh
 ./atalhos.sh
 ```
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption><p>É necessário digitar o número da opção desejada e apertar Enter.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption><p>É necessário digitar o número da opção desejada e apertar Enter. Caso encerre por acidente o script, rode apenas ./atalhos.sh para executar novamente.</p></figcaption></figure>
 
 3.  Ao iniciar o script, digite **2** que corresponde a opção “Service Manager”. E então insira o número da opção corresponde a versão do VRMaster do cliente.\
 
