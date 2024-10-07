@@ -73,6 +73,27 @@ Nesse caso a pasta compartilhada não é protegida por senha, então vamos omiti
 
 <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption><p>Embora a mensagem seja “Conexão realizada”, é recomendado verificar na pasta ~/.vr/server se os arquivos do servidor já encontram.</p></figcaption></figure>
 {% endtab %}
+
+{% tab title="Conferir a nova pasta" %}
+Para confirmar que a pasta compartilhada foi mapeada com sucesso na máquina, vamos conferir se os arquivos estão na pasta.
+
+1.  Abra o explorador de arquivos do sistema operacional.\
+
+
+    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Seleciona o atalho na área de trabalho ou na barra de tarefas.</p></figcaption></figure>
+2.  A pasta .vr deve estar na pasta home do usuário logado, equivalente à pasta .vr na pasta Usuários do Windows. Por padrão, o explorador de arquivos já abre na pasta home do usuário.\
+
+
+    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>A pasta do usuário aparece com o ícone de casa no lado esquerdo.</p></figcaption></figure>
+3.  No Linux, assim como no Windows, as pastas iniciadas por "." são ocultas, então para visualizá-las no explorador é necessário ativar esta flag em Ver > Mostrar arquivos ocultos.\
+
+
+    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>A pasta .vr agora aparece no explorador de arquivos.</p></figcaption></figure>
+4.  Dentro da pasta .vr, você encontrará várias outras pastas e arquivos de configuração que pertencem ao Service Manager e outras aplicações que rodam com o Docker. O que nos interessa no momento é a pasta **server** que é a pasta mapeada nos passos anteriores. \
+
+
+    <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>A pasta mapeada está localizada em ~./vr/server/</p></figcaption></figure>
+{% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}

@@ -100,7 +100,7 @@ chmod +x atalhos.sh
 
 3.  Ao iniciar o script, digite **2** que corresponde a opção “Service Manager” e aperte a tecla _Enter_ para seguir.&#x20;
 
-    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Escolha a opção Service Manager no menu de funções.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Escolha a opção Service Manager no menu de funções.</p></figcaption></figure>
 
 
 4.  Digite o número da lista que corresponde a versão do VRMaster do cliente.
@@ -141,17 +141,17 @@ Não há um teste no script para confirmar a conexão com o banco de dados a par
 
 {% tabs %}
 {% tab title="Pastas" %}
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Limpa a pasta .vr e cria a estrutura de pastas novamente.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Limpa a pasta .vr e cria a estrutura de pastas novamente.</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Arquivos de configuração" %}
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>vr.properties, script de particionamento e arquivos yml.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>vr.properties, script de particionamento e arquivos yml.</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Service Container" %}
 <div align="center">
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Download das últimas versões disponíveis no link do script.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Download das últimas versões disponíveis no link do script.</p></figcaption></figure>
 
 </div>
 
