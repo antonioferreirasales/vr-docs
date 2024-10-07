@@ -137,7 +137,7 @@ Não há um teste no script para confirmar a conexão com o banco de dados a par
 {% endtab %}
 {% endtabs %}
 
-6. Acompanhe a criação da estrutura de pastas e download dos arquivos e aplicações.
+7. Acompanhe a criação da estrutura de pastas e download dos arquivos e aplicações.
 
 {% tabs %}
 {% tab title="Pastas" %}
@@ -169,7 +169,7 @@ Os arquivos serão baixados na pasta \~/.vr/servicemanager/service/
 {% endtab %}
 {% endtabs %}
 
-7. Após o script finalizar, suba os _containers_ das aplicações através do arquivo de configuração docker-compose-sm-sc.yml.
+8. Após o script finalizar, suba os _containers_ das aplicações através do arquivo de configuração docker-compose-sm-sc.yml.
 
 ```bash
 docker-compose -f ~/.vr/docker-compose-sm-sc.yml up -d
