@@ -21,7 +21,7 @@ layout:
 As informações desse artigo tiveram como fonte a páginal da Wiki oficial da VR ([Requisitos Mínimos](https://wiki.vrsoft.com.br/wiki/index.php/Requisitos\_M%C3%ADnimos) e [VRUbuntu](https://wiki.vrsoft.com.br/wiki/index.php/VRUbuntu\_Instalacao)) e orientações internas. Em caso de informações desatualizadas ou links indisponíveis neste documento, abra uma _issue_.
 {% endhint %}
 
-| Especificações recomendadas  | Service Manager                                                                                                                                    |
+| Especificações recomendadas  | Estação de trabalho                                                                                                                                |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CPU                          | i3 (2ª geração +) ou equivalente                                                                                                                   |
 | Memória RAM                  | 8 GB                                                                                                                                               |
