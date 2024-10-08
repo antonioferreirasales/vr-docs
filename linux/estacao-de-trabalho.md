@@ -46,6 +46,10 @@ Criando atalho no VRXubuntu.
     <figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption><p>Atalho do Anydesk na área de trabalho e número de acesso na janela aberta.</p></figcaption></figure>
 2. No canto inferior direito da tela, você encontrará o ícone do VRUtil, um utilitário exclusivo do VRUbuntu/VRXubuntu o qual uma das funções é mapear uma pasta da máquina com a pasta vr que está compartilhada no servidor de aplicativos ou de banco de dados do cliente.&#x20;
 
+{% hint style="warning" %}
+Assim como nas estações de trabalho Windows, o ideal é que as aplicações da VR sejam atalhos vinculados a pasta compartilhada do servidor de aplicação para que se mantenham sempre atualizadas sem trabalho manual. Evite apenas copiar os arquivos .jar do servidor direto para a máquina sempre que possível e, se necessário fazer, avise o cliente da necessidade de atualizar os arquivos manualmente depois de uma atualização de sistema já que o atalho não estará ligado a pasta do servidor.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Conectar ao Servidor de Aplicação" %}
 <figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption><p>Ícone do VRUtil</p></figcaption></figure>
@@ -80,22 +84,90 @@ Para confirmar que a pasta compartilhada foi mapeada com sucesso na máquina, va
 1.  Abra o explorador de arquivos do sistema operacional.\
 
 
-    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Seleciona o atalho na área de trabalho ou na barra de tarefas.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Seleciona o atalho na área de trabalho ou na barra de tarefas.</p></figcaption></figure>
 2.  A pasta .vr deve estar na pasta home do usuário logado, equivalente à pasta .vr na pasta Usuários do Windows. Por padrão, o explorador de arquivos já abre na pasta home do usuário.\
 
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>A pasta do usuário aparece com o ícone de casa no lado esquerdo.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>A pasta do usuário aparece com o ícone de casa no lado esquerdo.</p></figcaption></figure>
 3.  No Linux, assim como no Windows, as pastas iniciadas por "." são ocultas, então para visualizá-las no explorador é necessário ativar esta flag em Ver > Mostrar arquivos ocultos.\
 
 
-    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>A pasta .vr agora aparece no explorador de arquivos.</p></figcaption></figure>
-4.  Dentro da pasta .vr, você encontrará várias outras pastas e arquivos de configuração que pertencem ao Service Manager e outras aplicações que rodam com o Docker. O que nos interessa no momento é a pasta **server** que é a pasta mapeada nos passos anteriores. \
+    <figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>A pasta .vr agora aparece no explorador de arquivos.</p></figcaption></figure>
+4.  Dentro da pasta .vr, você encontrará várias outras pastas e arquivos de configuração que pertencem ao Service Manager, Service Container e outras aplicações que rodam com o Docker. O que nos interessa no momento é a pasta **server** que é a pasta mapeada nos passos anteriores. \
 
 
-    <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>A pasta mapeada está localizada em ~./vr/server/</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>A pasta mapeada está localizada em ~./vr/server/</p></figcaption></figure>
+5.  Dentro da pasta server deve ter todo o conteúdo da pasta vr, cujo caminho você configurou pelo VRUtil no passo anterior, incluindo a pasta exec com todas as aplicações .jar do servidor como VRMaster, VRFrente, etc.\
+
+
+    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Pasta vr do servidor mapeada para a pasta server na estação de trabalho.</p></figcaption></figure>
+
+    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pasta exec com os arquivos .jar necessários para criação dos atalhos.</p></figcaption></figure>
+
+{% hint style="success" %}
+Uma vez confirmado que os arquivos estão na pasta corretamente mapeada, basta agora criar os atalhos na área de trabalho do cliente. Para esse método de criação de atalho, o atalho do VRMaster que já vem por padrão na área de trabalho não funciona pois tem como alvo outra pasta, então recomendo excluí-lo e criar um novo atalho através do script que utilizaremos nos passos seguintes.&#x20;
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
-{% hint style="warning" %}
-Assim como nas estações de trabalho Windows, o ideal é que as aplicações da VR sejam atalhos vinculados a pasta compartilhada do servidor de aplicação para que se mantenham sempre atualizadas e sua atualização manual não seja necessária. Evite apenas copiar os arquivos .jar do servidor direto para a máquina sempre que possível e, se necessário, avise o cliente da necessidade de atualizar os arquivos manualmente depois de uma atualização de sistema.
+6. Abra um novo terminal do Linux e execute os seguintes comandos:
+
+```bash
+curl https://storage.googleapis.com/linux-pdv/gbardini/util/sm/atalhos.sh -o atalhos.sh
+chmod +x atalhos.sh
+./atalhos.sh
+```
+
+<details>
+
+<summary>Aviso: Coleta insegura</summary>
+
+Ao copiar e colar o comando no terminal, uma janela de aviso pode aparecer com o conteúdo copiado, avisando-o dos riscos de colar comandos arbitrariamente no terminal Linux. Nesse caso em específico, você pode apenas confirmar a cola dos comandos cliquando no botão de "Colar". \
+
+
+</details>
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Confirme os comandos e pressione em Colar.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Após colar, pressione a tecla Enter uma vez para executá-los em sequência.</p></figcaption></figure>
+
+7.  O primeiro comando baixará o script, o seguindo comando dará permissão de execução do arquivo baixado (atalhos.sh) e o terceiro comando executará o arquivo, solicitando a senha do usuário logado na máquina. Digite a senha e pressione Enter para executar o script.\
+
+
+    <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Terminal solicitando a senha do usuário logado chamado sm.</p></figcaption></figure>
+
+{% hint style="info" %}
+No terminal do Linux, é comum não mostrar nenhum caracter ao digitar senhas. Então não espere ver nenhum asterisco (\*) ao digitar a senha, apenas a digite e aperte Enter para confirmar. Se errar e precisar executar o terminal novamente, apenas execute o último comando ./atalhos.sh pois o arquivo já deve estar no lugar com suas permissões.&#x20;
 {% endhint %}
+
+8.  Digitando a senha com sucesso, o script é executado e um menu é impresso no terminal com várias funções utilitárias. Para selecionar uma função, é necessário identificá-la na lista, digitar seu número correspondente e pressionar Enter.\
+
+
+    <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+{% tabs %}
+{% tab title="Criação de atalho" %}
+A única opção que vamos utilizar nesse manual é a primeira, "Criação de atalhos na área de trabalho".
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Digite 1 e pressione Enter para seguir.</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Diterório da exec" %}
+No menu seguinte, precisamos escolher a opção que define o diretório da exec que mapeamos no começo. Como o VRUtil sempre mapeia para a pasta .vr/server/exec dentro da pasta home do usuário logado no momento, a segunda opção será a escolha correta.\
+
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Digite 2 e pressione Enter.</p></figcaption></figure>
+
+{% hint style="info" %}
+Em estações de trabalho externas, é comum que os arquivos .jar sejam copiados diretamente para a pasta /vr/exec pois não há acesso a pasta compartilhada e portanto não é possível um mapeamento na pasta server. É necessário sempre escolher a opção que corresponde ao diretório dos arquivos das aplicações, nesse exemplo seria a primeira opção /vr/exec.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Escolha um aplicativo" %}
+Agora você precissa escolher a aplicação que deseja criar o atalho. Vamos criar um atalho da primeira aplicação da lista e mais comum do sistema, VRMaster.\
+
+
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Digite 1 e pressione Enter.</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
