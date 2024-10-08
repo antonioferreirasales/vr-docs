@@ -88,21 +88,21 @@ Para confirmar que a pasta compartilhada foi mapeada com sucesso na máquina, va
 2.  A pasta .vr deve estar na pasta home do usuário logado, equivalente à pasta .vr na pasta Usuários do Windows. Por padrão, o explorador de arquivos já abre na pasta home do usuário.\
 
 
-    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>A pasta do usuário aparece com o ícone de casa no lado esquerdo.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>A pasta do usuário aparece com o ícone de casa no lado esquerdo.</p></figcaption></figure>
 3.  No Linux, assim como no Windows, as pastas iniciadas por "." são ocultas, então para visualizá-las no explorador é necessário ativar esta flag em Ver > Mostrar arquivos ocultos.\
 
 
-    <figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>A pasta .vr agora aparece no explorador de arquivos.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>A pasta .vr agora aparece no explorador de arquivos.</p></figcaption></figure>
 4.  Dentro da pasta .vr, você encontrará várias outras pastas e arquivos de configuração que pertencem ao Service Manager, Service Container e outras aplicações que rodam com o Docker. O que nos interessa no momento é a pasta **server** que é a pasta mapeada nos passos anteriores. \
 
 
-    <figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>A pasta mapeada está localizada em ~./vr/server/</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>A pasta mapeada está localizada em ~./vr/server/</p></figcaption></figure>
 5.  Dentro da pasta server deve ter todo o conteúdo da pasta vr, cujo caminho você configurou pelo VRUtil no passo anterior, incluindo a pasta exec com todas as aplicações .jar do servidor como VRMaster, VRFrente, etc.\
 
 
-    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Pasta vr do servidor mapeada para a pasta server na estação de trabalho.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Pasta vr do servidor mapeada para a pasta server na estação de trabalho.</p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pasta exec com os arquivos .jar necessários para criação dos atalhos.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Pasta exec com os arquivos .jar necessários para criação dos atalhos.</p></figcaption></figure>
 
 {% hint style="success" %}
 Uma vez confirmado que os arquivos estão na pasta corretamente mapeada, basta agora criar os atalhos na área de trabalho do cliente. Para esse método de criação de atalho, o atalho do VRMaster que já vem por padrão na área de trabalho não funciona pois tem como alvo outra pasta, então recomendo excluí-lo e criar um novo atalho através do script que utilizaremos nos passos seguintes.&#x20;
@@ -131,7 +131,7 @@ Ao copiar e colar o comando no terminal, uma janela de aviso pode aparecer com o
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Após colar, pressione a tecla Enter uma vez para executá-los em sequência.</p></figcaption></figure>
 
-7.  O primeiro comando baixará o script, o seguindo comando dará permissão de execução do arquivo baixado (atalhos.sh) e o terceiro comando executará o arquivo, solicitando a senha do usuário logado na máquina. Digite a senha e pressione Enter para executar o script.\
+7.  O primeiro comando baixará o script, o segundo comando dará permissão de execução do arquivo baixado (atalhos.sh) e o terceiro comando executará o arquivo, solicitando a senha do usuário logado na máquina. Digite a senha e pressione Enter para executar o script.\
 
 
     <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Terminal solicitando a senha do usuário logado chamado sm.</p></figcaption></figure>
@@ -168,6 +168,39 @@ Agora você precissa escolher a aplicação que deseja criar o atalho. Vamos cri
 
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Digite 1 e pressione Enter.</p></figcaption></figure>
+
+Após isso, o script deve criar o atalho do aplicativo na área de trabalho e você poderá escolher entre criar mais um atalho ou voltar para o menu inicial.\
+
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Atalho criado.</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
+
+9. Ao tentar abrir o VRMaster ele tentará criar um novo vr.properties no diretório /vr. Para evitar erros na criação dele, criaremos a pasta vr e daremos permissões com os comandos:
+
+```bash
+sudo mkdir /vr
+sudo chmod -R 2777 /vr
+```
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+Caso apareça a mensagem de erro <mark style="color:red;">mkdir: não foi possível criar o diterório "/vr": Arquivo existe</mark>, significa que a pasta vr já existe e você pode apenas executar o segundo comando para as permissões.
+{% endhint %}
+
+10. Ao abrir o atalho pela primeira vez, uma janela para configurar o vr.properties aparecerá e seus campos devem ser preenchidos conforme as informações do banco de dados e loja do cliente. Você pode copiar as informações do vr.properties, que agora deve estar mapeado na pasta ./vr/server/vr.properties, e _clickar_ no botão "Salvar".\
+
+
+    <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Configuração do vr.properties.</p></figcaption></figure>
+
+{% hint style="success" %}
+Se tudo estiver correto, o vr.properties será salvo na pasta /vr e a tela de login do VRMaster abrirá.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Atalho do VRMaster criado com sucesso!</p></figcaption></figure>
+
+{% hint style="info" %}
+Diferente dos atalhos das aplicações pela pasta compartilhada no Windows, os atalhos no Linux levarão em consideração o vr.properties na pasta vr e não na pasta .vr.
+{% endhint %}
 
